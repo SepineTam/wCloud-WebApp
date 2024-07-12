@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+.left-panel, .right-panel {
+    padding: 30px;
+    box-sizing: border-box;
+}
+.left-panel {
+    width: 20%;
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* 添加这行来确保内容垂直排列 */
+    justify-content: space-between; /* 使内容分布在顶部和底部 */
+    height: 100vh; /* 确保 div 占满整个父容器的高度 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;  /* 设置内容垂直排列 */
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;  /* 保持底部对齐 */
+    padding: 20px 0;  /* 根据需要调整 */
+    width: 100%;
+}
+
+.footer-logo {
+    width: 60vh;  /* 调整大小适合你的设计 */
+    height: auto;  /* 保持图像比例 */
+    margin-bottom: 10px;  /* 在 logo 和版权信息之间添加空间 */
+}
+.header-logo {
+    width: 60vh;  /* 调整大小适合你的设计 */
+    height: auto;  /* 保持图像比例 */
+    /*margin-bottom: 10px;  !* 在 logo 和版权信息之间添加空间 *!*/
+}
+
+.right-panel {
+    width: 80%;
+    display: flex;
+    flex-direction: column; /* 设置为列布局，即上下排列 */
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header img {
+    width: 60vh;  /* 使用视口高度的百分比来设置宽度 */
+    height: auto;  /* 自动调整高度以保持图像的纵横比 */
+    /*margin-bottom: 10px;  !* 为下面的表单内容添加一些间距 *!*/
+}
+
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+input[type="file"], select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    /*之前没有width这行，是为了让第二个出来的上传文件的不突兀才改的*/
+    /*width: 30vh;*/
+}
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px auto;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #45a049;
+}
+#wordcloud-image {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.hidden {
+    display: none;
+}

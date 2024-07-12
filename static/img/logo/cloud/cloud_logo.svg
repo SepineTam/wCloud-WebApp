@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_2" data-name="图层 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1065 809.04">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff4f3f;
+        font-family: Chalkduster, Chalkduster;
+        font-size: 500px;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        fill: #82c8ff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="_云" data-name="云">
+    <g>
+      <ellipse class="cls-2" cx="179.5" cy="400.25" rx="179.5" ry="152.25"/>
+      <circle class="cls-2" cx="516" cy="400.5" r="152"/>
+      <ellipse class="cls-2" cx="869" cy="369.25" rx="196" ry="183.25"/>
+      <ellipse class="cls-2" cx="342.5" cy="286.75" rx="193.5" ry="177.75"/>
+      <ellipse class="cls-2" cx="607.5" cy="221" rx="248" ry="221"/>
+      <polyline class="cls-2" points="191 552.5 869 552.5 880.19 339.5 191 323.08"/>
+    </g>
+    <text class="cls-1" transform="translate(279.22 431.45) scale(1.24 1)"><tspan x="0" y="0">w</tspan></text>
+  </g>
+</svg>

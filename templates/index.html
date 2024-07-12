@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wCloud - 词云生成器</title>
+    <link rel="icon" type="image/x-ico" href="static/img/logo/cloud/cloud_logo.svg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+</head>
+<body>
+    <div class="left-panel">
+        <div class="header">
+            <img src="{{ url_for('static', filename='img/logo/cloud/cloud_logo.svg') }}"
+                 alt="wCloud Logo" class="logo" width="60vh" height="auto">
+        </div>
+        <form id="wordcloud-form" method="POST" enctype="multipart/form-data" action="/">
+            <label for="text-file">上传文本文件:</label>
+
+            <input type="file" id="text-file" name="text-file" accept=".txt" required>
+
+            <label for="stop-words">选择停词:</label>
+            <select id="stop-words" name="stop-words">
+                <option value="default_stopwords">默认</option>
+                <option value="hit_stopwords">HIT停词</option>
+                <option value="baidu_stopwords">百度停词</option>
+                <option value="custom">上传自定义停词文件</option>
+            </select>
+            <input type="file" id="custom-stop-words" name="custom-stop-words" accept=".txt" style="display: none;">
+
+            <label for="font">选择字体:</label>
+            <select id="font" name="font">
+                <option value="SimHei">黑体</option>
+                <option value="SimKai">楷体</option>
+                <option value="SimSun">宋体</option>
+            </select>
+
+            <label for="shape">选择形状:</label>
+            <select id="shape" name="shape">
+                <option value="rectangle">矩形</option>
+                <option value="ChoiceB">目前不支持选择，请等待version2.0.0</option>
+                <option value="ChoiceC">目前不支持选择，请等待version2.0.0</option>
+            </select>
+
+            <button type="submit">生成词云✅</button>
+        </form>
+        <div class="footer">
+            © 2024 wCloud. All rights reserved.
+        </div>
+    </div>
+    <div class="right-panel">
+        <nav>
+            <ul>
+                <li><a href="https://sepinetam.github.io/donate">Donate</a></li>
+                <li><a href="https://tools/sepinetam.com">Tools</a></li>
+                <li><a href="https://sepinetam.github.io">About</a></li>
+            </ul>
+        </nav>
+
+        {% if wordcloud %}
+        <img id="wordcloud-image" src="{{ wordcloud }}" alt="生成的词云">
+        {% else %}
+        <img id="wordcloud-image" src="{{ url_for('static', filename='img/logo/full/wCloud_logo.svg') }}" alt="生成的词云">
+        {% endif %}
+    </div>
+
+{#    <script src="{{ url_for('static', filename='js/flask.js') }}"></script>#}
+    <script src="{{ url_for('static', filename='js/hidden_input.js') }}"></script>
+    {% if error %}
+        <script src="{{ url_for('static', filename='js/onload.js') }}"></script>
+        <script>
+            // 确保页面加载完成后执行
+            window.onload = function() {
+                displayError('{{ error }}');
+            };
+        </script>
+    {% endif %}
+
+
+
+</body>
+</html>

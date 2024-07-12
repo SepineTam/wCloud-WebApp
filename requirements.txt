@@ -1,0 +1,7 @@
+jieba
+
+wordcloud
+matplotlib
+
+Flask
+Flask-Cors
